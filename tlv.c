@@ -30,16 +30,12 @@ void adicionar(Node *tabela[], Node *node, int pos){
 void printTabela(Node *tabela[], int tamanho){
   for(int i = 0; i < tamanho; i++){
     Node *temp = tabela[i];
-    printf("%d -> ", i);
+    printf("%d -> ", i);;
     while (temp != NULL){
-        printf("%d -> ", temp -> valor);
+        printf("%d -> ", temp->valor);
         temp = temp -> next;
     };
-    if(i!=tamanho-1){
-      printf("\\\n");
-    }else{
-      printf("\\");
-    }
+    printf("\\\n");
   }
   return;
 }
@@ -71,8 +67,9 @@ int main(void) {
     }
 
     printTabela(tabelaHash, tamanho);
+
     if(iteracoes){
-      printf("\n\n");
+      printf("\n");
     }
   }
   return 0;
